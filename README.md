@@ -14,7 +14,7 @@ It's a challenge coming up with new animations and designs for content which doe
 
 ## To be Completed...
 
-Few projects based on API's are work in progress. I am hoping to add them in my Projects section soon.    
+Few projects based on API's are work in progress. I am hoping to add them in my Projects section soon.<br><br>  
 
 
 
