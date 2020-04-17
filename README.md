@@ -15,3 +15,8 @@ It's a challenge coming up with new animations and designs for content which doe
 ## To be Completed...
 
 Few projects based on API's are work in progress. I am hoping to add them in my Projects section soon.
+
+
+
+Services Page Background by <a href="https://unsplash.com/photos/9cd8qOgeNIY">Chris Liverani</a> on <a href="https://unsplash.com/">Unsplash</a></p>  
+Contact Page Background by <a href="https://unsplash.com/photos/eY1x1epA24g">Jaime Lopes</a> on <a href="https://unsplash.com/">Unsplash</a></p>
