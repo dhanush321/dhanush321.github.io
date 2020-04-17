@@ -1,4 +1,4 @@
-# Dhanush Krishnan's Personal Portfolio
+# Dhanush Krishnan's Personal Portfolio Website
 
 ## The Code
 
