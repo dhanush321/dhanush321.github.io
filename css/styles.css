@@ -71,7 +71,7 @@ Hamburger Menu for Mobile
     nav ul{
         position: fixed;
         right:-50vw;
-        height: 85vh;
+        /* height: 85vh; */
         top:15vh;
         z-index: 2;
         background-color: white;
@@ -92,6 +92,9 @@ Hamburger Menu for Mobile
     .burger{
         display: block;
         cursor: pointer;
+        position: fixed;
+        right: .5vw;
+        z-index: 2;
     }
 }
 .nav-active{
@@ -328,7 +331,7 @@ About Page
 }
 .about-img{
     position: relative;
-    margin-left: 50px;
+    margin-left: 5%;
     top: 10%;
     margin-bottom: 20px;
 }
@@ -455,17 +458,18 @@ About Page
 Projects Page
 -------------------------------------------------------------------------------------------------*/
 .project{
-    height:400vh;
+    height:100%;
     display:flex;
+    background: black;
 }
 .project-title{
     width:50%;
-    height:100vh;
+    /* height:100vh; */
     display: flex;
     justify-content:center;
     background: black;
     align-items: center;
-    font-size: 30px;
+    font-size: 6vw;
     margin: 0!important;
 }
 .project h1{
@@ -509,7 +513,7 @@ a.button:hover{
     background-color:black;
 }
 .project-pages div{
-    height:100vh;
+    /* height:100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
