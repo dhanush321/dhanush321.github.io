@@ -71,7 +71,7 @@ Hamburger Menu for Mobile
     nav ul{
         position: fixed;
         right:-50vw;
-        /* height: 85vh; */
+        height: 100%;
         top:15vh;
         z-index: 2;
         background-color: white;
@@ -82,7 +82,7 @@ Hamburger Menu for Mobile
         transition-duration: 0.5s;
     }
     nav ul li{
-        margin: 3rem;
+        margin: 2rem;
         opacity:0;
     }
     nav ul li a{
