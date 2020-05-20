@@ -359,6 +359,11 @@ About Page
     animation: text 1s forwards ease-out;
     opacity: 0;
 }
+.about-text h2[data-scroll="in"]{
+    animation: text 1s forwards ease-out;
+    animation-delay: 1s;
+    opacity: 0;
+}
 @keyframes text{
     0%{
         opacity: 0;
@@ -372,16 +377,17 @@ About Page
     font-family: 'Exo', sans-serif;
     font-size: 50px;
     position: relative;
-    animation: text 1s forwards ease-out;
-    animation-delay: 1s;
-    opacity: 0;
+    
 }
 .about-text p{
     font-size: 18px;
     color: #ddd;
     position: relative;
+    
+}
+.about-text p[data-scroll="in"]{
     animation: text 1s forwards ease-out;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     opacity: 0;
 }
 .about-text .resume{
@@ -391,8 +397,11 @@ About Page
     display: inline-block;
     margin-top: 30px;
     position: relative;
+    
+}
+.about-text .resume[data-scroll="in"]{
     animation: text 1s forwards ease-out;
-    animation-delay: 2s;
+    animation-delay: 1s;
     opacity: 0;
 }
 @media screen and (max-width:1200px){
