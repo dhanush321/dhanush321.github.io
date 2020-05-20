@@ -362,8 +362,7 @@ About Page
 .about-text h2[data-scroll="in"]{
     animation: text 1s forwards ease-out;
     animation-delay: 1s;
-    opacity: 0;
-}
+}  
 @keyframes text{
     0%{
         opacity: 0;
@@ -377,18 +376,19 @@ About Page
     font-family: 'Exo', sans-serif;
     font-size: 50px;
     position: relative;
-    
+    opacity: 0;
 }
 .about-text p{
     font-size: 18px;
     color: #ddd;
     position: relative;
+    opacity: 0;
     
 }
 .about-text p[data-scroll="in"]{
     animation: text 1s forwards ease-out;
-    animation-delay: 1s;
-    opacity: 0;
+    animation-delay: 1.5s;
+    
 }
 .about-text .resume{
     background: #2196f3;
@@ -397,12 +397,13 @@ About Page
     display: inline-block;
     margin-top: 30px;
     position: relative;
+    opacity: 0;
     
 }
 .about-text .resume[data-scroll="in"]{
     animation: text 1s forwards ease-out;
-    animation-delay: 1s;
-    opacity: 0;
+    animation-delay: 2s;
+    
 }
 @media screen and (max-width:1200px){
     .about-text{
