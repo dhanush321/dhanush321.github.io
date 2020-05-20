@@ -777,6 +777,9 @@ textarea{
     cursor: pointer;
  }
 @media (max-width: 768px){
+    .contact{
+        height:100%;
+    }
     .contact .contact-form{
         display: block;
         width: 100%;
