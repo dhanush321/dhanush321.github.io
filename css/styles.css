@@ -45,6 +45,21 @@ nav ul li a{
 nav ul li a:hover{
     background: #2196f3;
     box-shadow: 0 0 30px#2196f3;
+    position: relative;
+    animation: navimate .1s forwards ease-out;
+    
+}
+@keyframes navimate{
+    0%{
+        left: 1px;
+    }
+    75%{
+        left:10px;
+    }
+    100%{
+        left: 0;
+    }
+
 }
 .active{
     background: #3eaa1d;
@@ -155,17 +170,7 @@ Home Page Hero Section
 /*------------------------------------------------------------------------------------------------
 Hero Section Animation
 -------------------------------------------------------------------------------------------------*/
-.bar{
-    width: 100%;
-    height: 200px;
-    background-color: red;
-    opacity: 0.4;
-    transform: translate(-50%, -50%);
-    left:50%;
-    top:40%;
-    position: absolute;
-    animation: scale-out 1.3s ease-out;
-}
+
 @media screen and (max-width: 950px){
     .hero h2{
         font-size: 6vw;
@@ -174,20 +179,20 @@ Hero Section Animation
         font-size: 3vw;
     }
 }
+@media screen and (max-width: 650px){
+    .hero h2{
+        font-size: 36px;
+    }
+    .hero p{
+        font-size: 22px;
+    }
+}
 @keyframes scale-in{
     0%{
-        transform: scale(3,3); opacity: 0;
+        transform: scale(-3,3); opacity: 0;
     }
     100%{
         transform: scale(1,1); opacity: 1;
-    }
-}
-@keyframes scale-out{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:100%;
     }
 }
 .bounce a{
@@ -294,6 +299,8 @@ Web Development Skills
 }
 .skills img{
     margin: 0px 50px 100px 40px;
+    animation: flash 1.5s infinite;
+    position: relative;
 }
 .skills h1{
     font-family: 'Exo', sans-serif;
@@ -302,26 +309,16 @@ Web Development Skills
     font-size: 45px;
     text-transform: uppercase;
 }
-.skills img:hover{
-    opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
-}
-@-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+@keyframes flash{
+    0%{
+        top:-10px;
+    }
+    50%{
+        top:0px;
+    }
+    100%{
+        top:-10px;
+    }
 }
 /*------------------------------------------------------------------------------------------------
 About Page
@@ -334,6 +331,17 @@ About Page
     margin-left: 5%;
     top: 10%;
     margin-bottom: 20px;
+    animation: about 1s forwards ease-out;
+    opacity: 0;
+}
+@keyframes about{
+    0%{
+        top:-20px;
+    }
+    100%{
+        top:10%;
+        opacity:1;
+    }
 }
 .about-img:before{
     position: absolute;
@@ -345,24 +353,47 @@ About Page
     height: 460px;
 }
 .about-text{
+    position: relative;
     padding-top:20%;
     margin: auto;
+    animation: text 1s forwards ease-out;
+    opacity: 0;
+}
+@keyframes text{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
 }
 .about-text h2{
     color: #fff;
     font-family: 'Exo', sans-serif;
     font-size: 50px;
+    position: relative;
+    animation: text 1s forwards ease-out;
+    animation-delay: 1s;
+    opacity: 0;
 }
 .about-text p{
     font-size: 18px;
     color: #ddd;
+    position: relative;
+    animation: text 1s forwards ease-out;
+    animation-delay: 1.5s;
+    opacity: 0;
 }
 .about-text .resume{
-    background: orangered;
+    background: #2196f3;
     color: #fff;
     padding: 7px 15px;
     display: inline-block;
     margin-top: 30px;
+    position: relative;
+    animation: text 1s forwards ease-out;
+    animation-delay: 2s;
+    opacity: 0;
 }
 @media screen and (max-width:1200px){
     .about-text{
@@ -459,76 +490,100 @@ Projects Page
 -------------------------------------------------------------------------------------------------*/
 .project{
     height:100%;
+    background: rgb(18, 19, 22);
     display:flex;
-    background: black;
-}
-.project-title{
-    width:50%;
-    /* height:100vh; */
-    display: flex;
-    justify-content:center;
-    background: black;
-    align-items: center;
-    font-size: 6vw;
-    margin: 0!important;
-}
-.project h1{
-    font-family: 'Exo', sans-serif;
-    margin: 20px 20px;
-    color:white;
-}
-.project h2{
-    font-family: 'Exo', sans-serif;
-    margin: 20px 20px;
-    color:black;
-}
-.project p{
-    font-family: 'Exo', sans-serif;
-    margin: 20px 20px;
-}
-.project-pages{
-    width:50%;
+    justify-content: center;
+
 }
 .project-pages img{
-    border-radius: 50px;
-    margin: 20px 20px;
-    height: 40%;
+    border-radius: 40px;
+    
+    opacity: 0;
+    height: auto;
     width: 100%;
-    padding: 20px;
+    /* box-shadow: 10px 10px 5px grey; */
+    position: relative;
+    border: 5px solid black;
+    margin-bottom: 10px;
 }
-a.button{
-    padding:0.35em 1.2em;
-    border:0.1em solid rgb(212, 31, 71);
-    margin:0 0.3em 0.3em 0;
-    border-radius:10px;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:black;
-    text-align:center;
-    transition: all 0.2s;
+.project-pages img[data-scroll="in"]{
+    animation: animaa 1.5s forwards;
+    animation-delay: 1s;
 }
-a.button:hover{
-    color:white;
-    background-color:black;
+.project-pages h2{
+    font-family: 'Exo', sans-serif;
+    margin: 20px 20px;
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-transform: uppercase;
+}
+.project-pages h2[data-scroll="in"]{
+    animation: anim 2s forwards;
+}
+@keyframes animage{
+    0% {
+       right:-100px;
+       opacity: 0;
+    }
+     100% {
+        right:0;
+        opacity: 1;
+     }
+}
+@keyframes anim{
+    0% {
+       left:-200px;
+       opacity: 0;
+    }
+     100% {
+        left:0;
+        opacity: 1;
+     }
 }
 .project-pages div{
-    /* height:100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgb(151, 145, 144);
+    box-shadow: 10px 10px 10px 10px black;
 }
-.project-pages div:nth-child(1){
-    background-color: #c0c0c0;
+.project-pages a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    padding:10px;
+    font-family: 'Exo', sans-serif;
+    color:white;
+    border: 2px solid gray;
+    
 }
-.project-pages div:nth-child(2){
-    background-color: #a09e9e;
+.button[data-scroll="in"]{
+    animation: animaa 2s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9));
 }
-.project-pages div:nth-child(3){
-    background-color: #7c7c7c;
+.button1[data-scroll="in"]{
+    animation: animaa 2s forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9));
 }
-.project-pages div:nth-child(4){
-    background-color: #7e6e6e;
+@keyframes animaa{
+    0% {
+       opacity: 0;
+    }
+     100% {
+        opacity: 1;
+     }
+}
+.project-pages a:hover{
+    transform: skew(10deg);
+    background: honeydew;
+    color: indigo;
 }
 /*------------------------------------------------------------------------------------------------
 Services Page
@@ -539,6 +594,7 @@ Services Page
     background-size: cover;
     background-position: center;
     padding: 60px 0;
+    height:100vh;
 }
 .inner-width{
     width:100%;
@@ -600,16 +656,25 @@ Services Page
     font-size: 14px;
 }
 @media screen and (max-width:960px){
+    .services{
+        height:100%;
+    }
     .service-box{
         max-width: 45%;
     }
 }
 @media screen and (max-width:768px){
+    .services{
+        height:100%;
+    }
     .service-box{
         max-width: 50%;
     }
 }
 @media screen and (max-width:480px){
+    .services{
+        height:100%;
+    }
     .service-box{
         max-width: 100%;
     }

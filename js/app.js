@@ -20,19 +20,3 @@ const navSlide = () => {
     });
 }
 navSlide();
-
-//Project Page Split Scroll
-
-function splitScroll(){
-    const controller = new ScrollMagic.Controller();
-
-    new ScrollMagic.Scene({
-        duration: '300%',
-        triggerElement: '.project-title',
-        triggerHook: 0
-    })
-    .setPin('.project-title')
-    .addTo(controller);
-}
-
-splitScroll();
