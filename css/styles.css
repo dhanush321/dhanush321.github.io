@@ -301,6 +301,7 @@ Web Development Skills
     margin: 0px 50px 100px 40px;
     animation: flash 1.5s infinite;
     position: relative;
+    
 }
 .skills h1{
     font-family: 'Exo', sans-serif;
@@ -426,10 +427,10 @@ About Page
     background: black;
 }
 .container4{
-    width: 1200px;
+    width: 1600px;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap:15px;
+    grid-gap:10px;
     margin: 0 auto;
 }
 .container4 .card{
@@ -480,6 +481,9 @@ About Page
 }
 .container4 .card:nth-child(3) .face.face2{
     background: linear-gradient(45deg,#e91e63,#ffeb3b);
+}
+.container4 .card:nth-child(4) .face.face2{
+    background: linear-gradient(45deg,#0bacb8,#05f160);
 }
 .container4 .card:hover .face.face2{
     height: 60px;
@@ -687,6 +691,11 @@ Services Page
     }
     .service-box{
         max-width: 100%;
+    }
+}
+@media screen and (max-height:700px){
+    .services{
+        height:100%;
     }
 }
 .container2{
